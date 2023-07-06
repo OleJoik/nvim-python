@@ -11,6 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+
+
+
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 "github/copilot.vim",
@@ -30,21 +33,44 @@ require("lazy").setup({
 {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    config = function () 
+    config = function ()
       local configs = require("nvim-treesitter.configs")
 
       configs.setup({
           ensure_installed = { "c", "lua","python", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" },
           sync_install = false,
           highlight = { enable = true },
-          indent = { enable = true },  
+          indent = { enable = true },
         })
     end
  },
 
 'Mofiqul/vscode.nvim',
 
-"neovim/nvim-lspconfig"
+"neovim/nvim-lspconfig",
+"lukas-reineke/indent-blankline.nvim",
+"jose-elias-alvarez/null-ls.nvim",
+
+{
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    dependencies = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},
+      {
+        'williamboman/mason.nvim',
+        build = function()
+          pcall(vim.cmd, 'MasonUpdate')
+        end,
+      },
+      {'williamboman/mason-lspconfig.nvim'},
+
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},
+      {'hrsh7th/cmp-nvim-lsp'},
+      {'L3MON4D3/LuaSnip'},
+    }
+  }
 
 })
 

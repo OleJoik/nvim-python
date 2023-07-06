@@ -1,0 +1,27 @@
+{
+    "workspace.library": [
+        "/home/olol/.config/nvim",
+        "/home/olol/.local/share/nvim/lazy/lazy.nvim",
+        "/home/olol/.local/share/nvim/lazy/null-ls.nvim",
+        "/home/olol/.local/share/nvim/lazy/LuaSnip",
+        "/home/olol/.local/share/nvim/lazy/cmp-nvim-lsp",
+        "/home/olol/.local/share/nvim/lazy/nvim-cmp",
+        "/home/olol/.local/share/nvim/lazy/mason-lspconfig.nvim",
+        "/home/olol/.local/share/nvim/lazy/mason.nvim",
+        "/home/olol/.local/share/nvim/lazy/lsp-zero.nvim",
+        "/home/olol/.local/share/nvim/lazy/telescope.nvim",
+        "/home/olol/.local/share/nvim/lazy/copilot.vim",
+        "/home/olol/.local/share/nvim/lazy/indent-blankline.nvim",
+        "/home/olol/.local/share/nvim/lazy/plenary.nvim",
+        "/home/olol/.local/share/nvim/lazy/lazygit.nvim",
+        "/home/olol/.local/share/nvim/lazy/vscode.nvim",
+        "/home/olol/.local/share/nvim/lazy/nvim-treesitter",
+        "/home/olol/.local/share/nvim/lazy/nvim-lspconfig",
+        "/tmp/.mount_nvimYRfrwd/usr/share/nvim/runtime",
+        "/tmp/.mount_nvimYRfrwd/usr/share/nvim/runtime/pack/dist/opt/matchit",
+        "/tmp/.mount_nvimYRfrwd/usr/lib/nvim",
+        "/home/olol/.local/state/nvim/lazy/readme",
+        "/home/olol/.local/share/nvim/lazy/cmp-nvim-lsp/after",
+        "${3rd}/luassert/library"
+    ]
+}
