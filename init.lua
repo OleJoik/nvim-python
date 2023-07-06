@@ -26,9 +26,29 @@ require("lazy").setup({
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
 -- or                              , branch = '0.1.x',
       dependencies = { 'nvim-lua/plenary.nvim' }
-    }
+    },
+{
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function () 
+      local configs = require("nvim-treesitter.configs")
+
+      configs.setup({
+          ensure_installed = { "c", "lua","python", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" },
+          sync_install = false,
+          highlight = { enable = true },
+          indent = { enable = true },  
+        })
+    end
+ },
+
+'Mofiqul/vscode.nvim',
+
+"neovim/nvim-lspconfig"
+
 })
 
-require("remap")
 require("plugins")
+require("config.settings")
+require("config.remap")
 
